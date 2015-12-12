@@ -18,10 +18,10 @@ import java.util.*;
 
 public class ItemAdapter extends ArrayAdapter<Item> {
 
-    Item[] itemArray;
+    ArrayList<Item> itemArray = new ArrayList<>();
     Context context;
 
-    public ItemAdapter(Context context, int textViewResourceId, Item[] objects) {
+    public ItemAdapter(Context context, int textViewResourceId, ArrayList<Item> objects) {
         super(context, textViewResourceId, objects);
         this.itemArray = objects;
         this.context = context;
@@ -34,7 +34,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
             v = inflater.inflate(R.layout.list_item, null);
         }
 
-        Item i = itemArray[position];
+        Item i = itemArray.get(position);
 
         if(i != null) {
             TextView tt = (TextView) v.findViewById(R.id.itemName);
