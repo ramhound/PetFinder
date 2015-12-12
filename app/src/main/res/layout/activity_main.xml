@@ -11,8 +11,11 @@
     tools:context="com.example.ramin.petfinder.MainActivity">
 
     <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:drawSelectorOnTop="true"
+        android:layout_gravity="center"
+        android:dividerHeight="1dp"
         android:id="@+id/listView" />
 
 </RelativeLayout>

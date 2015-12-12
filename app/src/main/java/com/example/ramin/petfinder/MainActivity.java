@@ -1,5 +1,7 @@
 package com.example.ramin.petfinder;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -14,26 +16,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        String[] myStringArray = new String[] { "1Android List View",
-                "2Adapter implementation",
-                "1Simple List View In Android",
-                "1Create List View Android",
-                "2Android Example",
-                "2List View Source Code",
-                "1List View Array Adapter",
-                "2Android Example List View",
-                "2Adapter implementation",
-                "2Simple List View In Android",
-                "2Create List View Android",
-                "1Android Example",
-                "1List View Source Code",
-                "2List View Array Adapter",
-                "1Android Example List View"
-        };
+        Item[] itemsArray = new Item[10];
+        Bitmap icon = BitmapFactory.decodeResource(getResources(),
+                R.mipmap.ic_launcher);
+
+        for(int i = 0; i < itemsArray.length; i++) {
+
+            itemsArray[i] = new Item(icon,i);
+        }
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                R.layout.mylist, R.id.itemName, myStringArray);
+        ItemAdapter adapter = new ItemAdapter(this, R.layout.list_item, itemsArray);
+
+        //ItemAdapter<String> adapter = new ArrayAdapter<String>(this,
+                //R.layout.list_item, R.id.itemName, myStringArray);
 
 
         ListView listView = (ListView) findViewById(R.id.listView);
