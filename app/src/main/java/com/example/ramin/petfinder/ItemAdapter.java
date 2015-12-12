@@ -19,10 +19,12 @@ import java.util.*;
 public class ItemAdapter extends ArrayAdapter<Item> {
 
     Item[] itemArray;
+    Context context;
 
     public ItemAdapter(Context context, int textViewResourceId, Item[] objects) {
         super(context, textViewResourceId, objects);
         this.itemArray = objects;
+        this.context = context;
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -38,17 +40,19 @@ public class ItemAdapter extends ArrayAdapter<Item> {
             TextView tt = (TextView) v.findViewById(R.id.itemName);
             ImageView icon = (ImageView) v.findViewById(R.id.icon);
 
+
             if(icon != null) {
                 icon.setImageBitmap(i.getImage());
             }
 
             if(tt != null) {
                 String s = Integer.toString(i.getText());
-                tt.setText(s);
-                if(i.getText() % 2 == 0) {
-                    v.setBackgroundColor(Color.GREEN);
+                if(i.getText() % 3 == 0) {
+                    tt.setText("Lost");
+                    tt.setBackgroundColor(context.getResources().getColor(R.color.lost));
                 } else {
-                    v.setBackgroundColor(Color.RED);
+                    tt.setText("Found");
+                    tt.setBackgroundColor(context.getResources().getColor(R.color.found));
 
                 }
             }
