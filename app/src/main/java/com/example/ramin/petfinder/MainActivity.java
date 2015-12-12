@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Bitmap icon = BitmapFactory.decodeResource(getResources(),
-                R.mipmap.ic_launcher);
+                R.drawable.dog);
 
         for(int i = 0; i < 10; i++) {
 
