@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.pet_types, android.R.layout.simple_spinner_item);
+                R.array.pet_types, R.layout.spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
@@ -37,5 +37,9 @@ public class DetailsActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
             }
         });
+    }
+
+    public void nextClick(View v) {
+    //if any field is null, ask to complete all fields
     }
 }

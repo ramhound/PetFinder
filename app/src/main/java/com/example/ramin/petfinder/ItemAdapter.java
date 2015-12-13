@@ -33,22 +33,32 @@ public class ItemAdapter extends ArrayAdapter<Item> {
 
         if(i != null) {
             TextView tt = (TextView) v.findViewById(R.id.itemName);
+            TextView tt2 = (TextView) v.findViewById(R.id.textView);
+            TextView tt3 = (TextView) v.findViewById(R.id.textView2);
+
+
             ImageView icon = (ImageView) v.findViewById(R.id.icon);
 
 
             if(icon != null) {
-                icon.setImageBitmap(i.getImage());
+                icon.setImageBitmap(i.getIcon());
             }
 
             if(tt != null) {
-                if(i.getText() % 3 == 0) {
-                    tt.setText("Lost");
-                    tt.setBackgroundColor(context.getResources().getColor(R.color.lost));
-                } else {
+                if(i.isFound()) {
                     tt.setText("Found");
                     tt.setBackgroundColor(context.getResources().getColor(R.color.found));
 
+                } else {
+                    tt.setText("Lost");
+                    tt.setBackgroundColor(context.getResources().getColor(R.color.lost));
                 }
+            }
+            if(tt2 != null) {
+                tt2.setText(i.getPet());
+            }
+            if(tt3 != null) {
+                tt3.setText(i.getBreed());
             }
 
         }

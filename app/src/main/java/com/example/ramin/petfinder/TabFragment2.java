@@ -18,7 +18,7 @@ public class TabFragment2 extends Fragment {
         ArrayList<Item> lostArray = new ArrayList();
 
         for(int i = 0; i < MainActivity.itemsArray.size(); i++) {
-            if((MainActivity.itemsArray.get(i).getText() % 3) == 0) {
+            if(!MainActivity.itemsArray.get(i).isFound()) {
                 lostArray.add(MainActivity.itemsArray.get(i));
             }
         }

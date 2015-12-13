@@ -19,7 +19,7 @@ public class TabFragment3 extends Fragment {
         ArrayList<Item> foundArray = new ArrayList();
 
         for(int i = 0; i < MainActivity.itemsArray.size(); i++) {
-            if((MainActivity.itemsArray.get(i).getText() % 3) != 0) {
+            if(MainActivity.itemsArray.get(i).isFound()) {
                 foundArray.add(MainActivity.itemsArray.get(i));
             }
         }

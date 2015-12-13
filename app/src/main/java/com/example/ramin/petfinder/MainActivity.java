@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 0; i < 10; i++) {
 
-            itemsArray.add(new Item(icon,i));
+            itemsArray.add(new Item(true, "Dog", "Husky", "Black",
+                    "Really annoying", icon));
         }
 
     }

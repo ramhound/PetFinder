@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ramin.petfinder.HomeActivity"
-    android:background="#547d9f">
+    android:background="#ffffff">
 
     <LinearLayout
         android:orientation="vertical"
@@ -30,13 +30,13 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="54dp"
-                android:textColor="#004aa3"
+                android:textColor="#0099CB"
                 android:textAlignment="center" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:layout_gravity="center">
@@ -48,7 +48,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
 
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/buttonshape"
                 android:onClick="dirClick"
@@ -61,12 +61,12 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
 
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/buttonshape"
                 android:onClick="reportClick"
                 android:clickable="true"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="20dp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
