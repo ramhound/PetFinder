@@ -1,11 +1,7 @@
 package com.example.ramin.petfinder;
 
 import android.graphics.Bitmap;
-import android.media.Image;
 
-/**
- * Created by Ramin on 12/11/2015.
- */
 public class Item {
 
     private Bitmap icon;
@@ -21,7 +17,7 @@ public class Item {
         return icon;
     }
 
-    public void setDetails(Bitmap icon) {
+    public void setImage(Bitmap icon) {
         this.icon = icon;
     }
 

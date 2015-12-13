@@ -1,12 +1,6 @@
 package com.example.ramin.petfinder;
 
-/**
- * Created by Ramin on 12/11/2015.
- */
-
 import android.content.Context;
-import android.graphics.Color;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.*;
+import java.util.ArrayList;
+
 
 public class ItemAdapter extends ArrayAdapter<Item> {
 
@@ -46,7 +41,6 @@ public class ItemAdapter extends ArrayAdapter<Item> {
             }
 
             if(tt != null) {
-                String s = Integer.toString(i.getText());
                 if(i.getText() % 3 == 0) {
                     tt.setText("Lost");
                     tt.setBackgroundColor(context.getResources().getColor(R.color.lost));
