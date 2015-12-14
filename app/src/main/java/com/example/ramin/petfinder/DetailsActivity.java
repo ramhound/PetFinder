@@ -8,36 +8,31 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    private String type;
+    private boolean found;
+    private String pet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.pet_types, R.layout.spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            found = extras.getBoolean("found");
+            pet = extras.getString("pet");
+        }
 
-        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
+        TextView t1 = (TextView) findViewById(R.id.textView7);
 
-                type = parent.getItemAtPosition(position).toString();
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                // TODO Auto-generated method stub
-            }
-        });
+
     }
+
+
 
     public void nextClick(View v) {
     //if any field is null, ask to complete all fields

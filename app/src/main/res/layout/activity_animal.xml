@@ -48,11 +48,11 @@
                     android:text="Dog"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp"
-                    android:layout_width="300dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
-                    android:background="@color/colorPrimary"
-                    android:onClick="dirClick"
+                    android:background="#0099cb"
+                    android:onClick="dogClick"
                     android:clickable="true"
                     android:layout_gravity="center"
                     android:layout_weight="1" />
@@ -65,8 +65,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
-                    android:background="@drawable/buttonshape4"
-                    android:onClick="dirClick"
+                    android:background="#32add5"
+                    android:onClick="catClick"
                     android:clickable="true"
                     android:layout_gravity="center"
                     android:layout_weight="1" />
@@ -80,13 +80,13 @@
                 <Button
                     android:id="@+id/button3"
                     android:text="Other"
-                    android:textColor="#8b8b8b"
+                    android:textColor="@color/colorBackground"
                     android:textSize="14sp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:stateListAnimator="@null"
-                    android:background="@color/colorBackground"
-                    android:onClick="dirClick"
+                    android:background="#7fcce5"
+                    android:onClick="otherClick"
                     android:clickable="true"
                     android:layout_gravity="center" />
             </LinearLayout>

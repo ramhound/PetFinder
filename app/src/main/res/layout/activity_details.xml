@@ -41,29 +41,6 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pet: "
-                    android:id="@+id/textView6"
-                    android:textSize="21dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
-                    android:layout_weight=".1" />
-
-                <Spinner
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/spinner"
-                    android:background="@drawable/text_box"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
                 android:layout_marginTop="25dp">
@@ -175,7 +152,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:background="@drawable/buttonshape4"
+                android:background="@color/colorPrimary"
                 android:onClick="nextClick"
                 android:clickable="true" />
 
