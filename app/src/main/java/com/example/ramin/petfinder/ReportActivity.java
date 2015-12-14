@@ -16,14 +16,14 @@ public class ReportActivity extends AppCompatActivity {
 
     public void lostClick(View v) {
     boolean found = false;
-        Intent intent = new Intent(this, DetailsActivity.class);
+        Intent intent = new Intent(this, AnimalActivity.class);
         intent.putExtra("found", found);
         startActivity(intent);
 
     }
     public void foundClick(View v) {
         boolean found = true;
-        Intent intent = new Intent(this, DetailsActivity.class);
+        Intent intent = new Intent(this, AnimalActivity.class);
         intent.putExtra("found", found);
         startActivity(intent);
 

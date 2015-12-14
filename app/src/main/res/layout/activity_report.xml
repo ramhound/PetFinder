@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ramin.petfinder.ReportActivity"
-    android:background="#ffffff">
+    tools:context="com.example.ramin.petfinder.ReportActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,26 +14,41 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@color/colorAccent">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Are you reporting a lost pet or a found pet?"
-                android:id="@+id/textView4"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textSize="54dp"
-                android:gravity="center"
-                android:textColor="@color/colorPrimary" />
+                android:layout_weight="2"></LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Are you reporting a lost pet or a found pet?"
+                    android:id="@+id/textView4"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="36dp"
+                    android:textColor="@color/background_material_light"
+                    android:gravity="center" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3">
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
 
             <Button
                 android:id="@+id/lost"
@@ -43,12 +57,13 @@
                 android:textColor="#ffffff"
                 android:textSize="24sp"
 
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
                 android:background="@drawable/buttonshape2"
-                android:layout_gravity="center_horizontal"
                 android:clickable="true"
                 android:onClick="lostClick"
+                android:layout_gravity="center_horizontal"
+                android:stateListAnimator="@null"
                 android:layout_weight="1" />
 
             <Button
@@ -58,13 +73,12 @@
                 android:textColor="#ffffff"
                 android:textSize="24sp"
 
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
                 android:background="@drawable/buttonshape3"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="0dp"
                 android:onClick="foundClick"
                 android:clickable="true"
+                android:stateListAnimator="@null"
                 android:layout_weight="1" />
 
 
